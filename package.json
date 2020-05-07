@@ -1,0 +1,37 @@
+{
+  "name": "stars-of-recruitment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "auth.js",
+  "scripts": {
+    "test": "mocha -t 5000"
+  },
+  "devDependencies": {
+    "ejs": "^2.6.1",
+    "express": "^3.x.x",
+    "mocha": "*",
+    "morgan": "^1.9.1",
+    "nock": "^10.0.5",
+    "passport": "^0.4.0",
+    "should": "^13.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hekwerk/stars-of-recruitment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hekwerk/stars-of-recruitment/issues"
+  },
+  "homepage": "https://github.com/hekwerk/stars-of-recruitment#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "passport-oauth2": "1.x.x"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  }
+}

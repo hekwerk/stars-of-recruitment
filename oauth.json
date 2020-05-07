@@ -1,5 +1,5 @@
 {
   "vlientId": "77p2xikrgeng5w",
   "secret": "BvBB92hiEHyEDC4A",
-  "redirect": "http://localhost/linkedIn/redirect"
+  "redirect": "http://localhost:3000/auth/linkedin/callback"
 }
