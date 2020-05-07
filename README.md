@@ -2,5 +2,6 @@
 
 ## run example
 
-1. run npm install
-2. execute node ./example/server.js
+1. Run npm install
+2. Copy .sample-env to .env and change values
+2. Execute node ./example/server.js
