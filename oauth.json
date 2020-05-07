@@ -1,5 +1,5 @@
 {
-  "vlientId": "77p2xikrgeng5w",
-  "secret": "BvBB92hiEHyEDC4A",
+  "vlientId": ${{ secrets.LINKEDIN_OAUTH_CLIENTID }},
+  "secret": ${{ secrets.LINKEDIN_OAUTH_SECRET }},
   "redirect": "http://localhost/linkedIn/redirect"
 }
