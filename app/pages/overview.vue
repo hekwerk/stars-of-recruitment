@@ -3,8 +3,9 @@
     <h1 class="display-2">Vote for your star</h1>
 
     <ul>
-      <li v-for="rank in ranksToShow">
+      <li v-for="(rank, index) in ranksToShow">
         <HallOfFameItem
+          :rank="index"
           :amountVotes="rank.votes"
           :name="rank.name"
         ></HallOfFameItem>
@@ -61,9 +62,57 @@ export default {
         {
           name: 'The rest',
           votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
+        },
+        {
+          name: 'The rest',
+          votes: 7
         }
       ],
-      amountToShow: 3,
+      amountToShow: 8,
       showStepSize: 3
     }
   },
