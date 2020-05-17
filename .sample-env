@@ -1,5 +1,0 @@
-NODE_ENV=development
-PORT=3000
-LINKEDIN_CLIENT_ID=***
-LINKEDIN_CLIENT_SECRET=***
-CALLBACK_URL=http://localhost:3000/auth/linkedin/callback
