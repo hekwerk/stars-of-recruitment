@@ -1,7 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "install": "lerna bootstrap",
+    "clean": "lerna clean -y",
+    "preclean": "rimraf ./packages/functions/dist ./packages/client/dist"
+  },
   "devDependencies": {
-    "lerna": "^3.21.0"
+    "lerna": "^3.21.0",
+    "rimraf": "^3.0.2"
   }
 }
