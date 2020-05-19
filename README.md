@@ -12,5 +12,4 @@
 2. Run 'npm install'
 3. Run 'npm run dev'
 
-
 Proudly hosted on Netlify https://www.netlify.com/
