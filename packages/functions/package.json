@@ -1,0 +1,39 @@
+{
+  "name": "@stars-of-recruitment/functions",
+  "version": "1.0.0",
+  "description": "Stars of Recruitment - Functions",
+  "author": "Hekwerk",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "netlify-lambda serve ./src",
+    "build": "netlify-lambda build ./src",
+    "test": "cross-env NODE_ENV=test jest"
+  },
+  "dependencies": {
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@types/aws-lambda": "^8.10.51",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/simple-oauth2": "^2.5.3",
+    "@types/supertest": "^2.0.9",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "serverless-http": "^2.4.1",
+    "simple-oauth2": "^3.4.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-regenerator": "^7.8.7",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "cross-env": "^7.0.2",
+    "jest": "^26.0.1",
+    "netlify-lambda": "^1.6.3",
+    "node-linkedin-v2": "0.0.8",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.2"
+  }
+}

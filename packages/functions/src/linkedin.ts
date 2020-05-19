@@ -1,5 +1,3 @@
-// prettier-ignore
-
 import './dotenv';
 
 const LinkedInRestClient = require('node-linkedin-v2')

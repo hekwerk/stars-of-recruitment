@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
+    "sourceMap": false,
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es6",
@@ -9,9 +9,9 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "outDir": "../../functions"
+    "outDir": "./dist"
   },
   "include": [
-    "./*.ts"
+    "./src/*.ts"
   ]
 }

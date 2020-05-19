@@ -1,15 +1,16 @@
-# stars-of-recruitment
+# Stars of Recruitment
 
-## run linkedIn oauth example
+## Functions
 
-1. Run npm install
-2. Copy .sample-env to .env and change values
-3. Execute node ./example/server.js
+### Dev
 
-## run the app
+1. copy `.env.sample` to `.env` and set variables
+1. run `npm run dev`
+1. functions are available at `http://localhost:9000/.netlify/functions/...`
 
-1. cd ./app
-2. Run 'npm install'
-3. Run 'npm run dev'
+### LinkedIn OAuth
+1. Go to `http://localhost:9000/.netlify/functions/oauth/auth`
+2. Give permission in 
 
-Proudly hosted on Netlify https://www.netlify.com/
+
+# Credits

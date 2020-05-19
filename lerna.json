@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "npm",
+  "version": "independent",
+  "scripts": {
+    "install": "lerna bootstrap"
+  }
+}
