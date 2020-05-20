@@ -15,7 +15,11 @@
 2. Give permission in Linked in oAuth screen
 3. If everything went well the url set by `OAUTH_CLIENT_AUTHORIZE` will be called with `?ta=ACCESS_TOKEN`
 
+### LinkedIn API
+The LinkedIn-API can be used at `http://localhost:9000/.netlify/functions/linkedin/...`. Provide the access token above as Bearer token.
+
 ## Client
+...
 
 ## Cleanup
 1. run `npm run clean`
