@@ -1,14 +1,17 @@
 # Stars of Recruitment
 
-## Functions
-
 ### Install
 1. run `npm install`
 
 ### Dev
 1. copy `.env.sample` to `.env` and set variables
 1. run `npm run dev`
-1. functions are available at `http://localhost:9000/.netlify/functions/...`
+
+functions are available at 'http://localhost:9000/.netlify/functions/...'  
+client is available at 'http://localhost:9000'
+
+### Build
+1. run `npm run build`
 
 ### LinkedIn OAuth
 1. Go to `http://localhost:9000/.netlify/functions/oauth/auth`
