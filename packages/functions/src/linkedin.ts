@@ -1,32 +1,48 @@
+require('babel-polyfill');
+
 import './dotenv';
 
-const LinkedInRestClient = require('node-linkedin-v2')
+import express from 'express';
+import serverless from 'serverless-http';
+import LinkedInAPI from './linkedin-api';
 
-const callbackUrl = process.env.OAUTH_CALLBACK
-const linkedInClientId = process.env.LINKEDIN_CLIENT_ID
-const linkedInClientSecret = process.env.LINKEDIN_CLIENT_SECRET
+const app: express.Application = express();
 
-const handler: AWSLambda.Handler = async (event, _context, callback) => {
-  const accessToken = event?.headers?.accesstoken
+const router = express.Router();
+
+/**
+ * Middleware that injects the LinkedIn-API using provided access token [at]
+ *  @param {Express.Request} req
+ *  @param {Express.Response} res
+ */
+app.use(async (req: express.Request, res: express.Response, next) => {
+  const accessToken = req?.headers['at'] as string;
+
+  // TODO: oAuth AccessToken is used now, we need an internal access token that
+  // translates to the oAuth token, to keep it secret
 
   if (!accessToken) {
-    callback(null, { statusCode: 400, body: 'Invalid access token' })
+    res.status(400).send('Token error');
   } else {
-    const Linkedin = new LinkedInRestClient(
-      linkedInClientId,
-      linkedInClientSecret,
-      callbackUrl
-    )
-    try {
-      const result = await Linkedin.getCurrentMemberProfile(['id'], accessToken)
-      callback(null, { statusCode: 200, body: JSON.stringify(result) })
-    } catch (err) {
-      callback(null, {
-        statusCode: err?.status || 400,
-        body: err?.message || 'Unknown error'
-      })
-    }
+    res.app.set('linkedin', LinkedInAPI.init(accessToken));
+    next();
   }
-}
+})
 
-export { handler }
+router.get('/me', async (req: express.Request, res: express.Response) => {
+  const linkedin = req.app.get('linkedin')
+
+  try {
+    const result = await linkedin.request('get', '/me');
+    res.send(result);
+  }
+  catch (err) {
+    console.log(err)
+    res.status(err.status).send(err.message);
+  }
+});
+
+app.use('/.netlify/functions/linkedin', router);
+
+const handler: AWSLambda.Handler = serverless(app);
+export { handler, router, app };
