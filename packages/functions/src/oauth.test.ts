@@ -1,6 +1,6 @@
+/* eslint-env jest */
 import { app } from './oauth';
 
-import express from 'express'
 import request from 'supertest'
 
 const rootFn = '/.netlify/functions/oauth'
