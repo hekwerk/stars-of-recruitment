@@ -42,7 +42,7 @@ export default {
         {
           icon: 'mdi-apps',
           title: 'Overview',
-          to: '/overview'
+          to: '/'
         },
         {
           icon: 'mdi-apps',
