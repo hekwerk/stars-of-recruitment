@@ -4,6 +4,7 @@
   "scripts": {
     "install": "lerna bootstrap",
     "clean": "lerna clean -y",
+    "build": "lerna run build",
     "preclean": "rimraf ./packages/functions/dist ./packages/client/dist"
   },
   "devDependencies": {
