@@ -1,5 +1,7 @@
 # Stars of Recruitment
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8fe890ce-e264-4bae-ab79-8e6e29d8b5b2/deploy-status)](https://app.netlify.com/sites/wonderful-poitras-07b34c/deploys)
+
 ### Install
 1. run `npm install`
 
