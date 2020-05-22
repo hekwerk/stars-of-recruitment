@@ -1,33 +1,80 @@
 <template>
   <v-app>
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="4">
-          <v-list>
-            <v-list-item
-              v-for="(item, i) in items"
-              :key="i"
-              :to="item.to"
-              router
-              exact
-            >
-              <v-list-item-action>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-action>
-              <v-list-item-content>
-                <v-list-item-title v-text="item.title" />
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-col>
+    <v-app-bar
+     color="dark accent-4"
+     dense
+     dark
+    >
+     <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-        <v-col cols="12" sm="8">
-          <v-content>
-            <nuxt />
-          </v-content>
-        </v-col>
-      </v-row>
-    </v-container>
+     <v-toolbar-title>Stars of Recruitment</v-toolbar-title>
+
+     <v-spacer></v-spacer>
+
+     <v-menu
+       left
+       bottom
+     >
+       <template v-slot:activator="{ on }">
+         <v-btn icon v-on="on">
+           <v-icon>mdi-dots-vertical</v-icon>
+         </v-btn>
+       </template>
+
+       <v-list>
+         <v-list-item
+           v-for="(item, i) in items"
+           :key="i"
+           :to="item.to"
+           router
+           exact
+         >
+           <v-list-item-action>
+             <v-icon>{{ item.icon }}</v-icon>
+           </v-list-item-action>
+           <v-list-item-content>
+             <v-list-item-title v-text="item.title" />
+           </v-list-item-content>
+         </v-list-item>
+       </v-list>
+     </v-menu>
+    </v-app-bar>
+
+    <v-navigation-drawer
+        v-model="drawer"
+        absolute
+        temporary
+      >
+        <v-list
+          nav
+          dense
+        >
+          <v-list-item-group
+            v-model="group"
+            active-class="text--accent-4"
+          >
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-home</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-navigation-drawer>
+      <v-content>
+        <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view>
+          <nuxt />
+        </router-view>
+        </v-container>
+      </v-content>
+      <v-footer app>
+        <a href="https://www.netlify.com">
+         <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
+       </a>
+      </v-footer>
   </v-app>
 </template>
 
@@ -53,7 +100,8 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Vuetify.js',
+      group: null
     }
   }
 }

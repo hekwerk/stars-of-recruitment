@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-# stars-of-recruitment
-
-Proudly hosted on Netlify
-https://www.netlify.com/
-=======
 # Stars of Recruitment
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8fe890ce-e264-4bae-ab79-8e6e29d8b5b2/deploy-status)](https://app.netlify.com/sites/wonderful-poitras-07b34c/deploys)
 
 ### Install
 1. run `npm install`
@@ -36,4 +32,7 @@ The LinkedIn-API can be used at `http://localhost:9000/.netlify/functions/linked
 # Credits
 Sven Siertsema (https://github.com/SSiertsema)  
 Richard van Zon (https://github.com/rvanzon)
->>>>>>> develop
+Dave Ligthart (https://github.com/dligthart)
+
+Proudly hosted on Netlify
+https://www.netlify.com/
