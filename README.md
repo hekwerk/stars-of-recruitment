@@ -30,3 +30,4 @@ The LinkedIn-API can be used at `http://localhost:9000/.netlify/functions/linked
 # Credits
 Sven Siertsema (https://github.com/SSiertsema)  
 Richard van Zon (https://github.com/rvanzon)
+Dave Ligthart (https://github.com/dligthart)

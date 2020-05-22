@@ -1,19 +1,22 @@
 <template>
-  <v-layout column>
-    <h1 class="display-2">Vote for your star</h1>
-
-    <ul>
-      <li v-for="(rank, index) in ranksToShow">
+    <v-row dense>
+      <v-col
+        v-for="(rank, index) in ranksToShow"
+        key="i"
+        cols="12"
+      >
         <HallOfFameItem
           :rank="index"
-          :amountVotes="rank.votes"
+          :votes="rank.votes"
           :name="rank.name"
-        ></HallOfFameItem>
-      </li>
-    </ul>
-    <v-btn text small color="primary" @click="showMore">Toon meer</v-btn>
-    <v-btn color="primary">Vote for YOUR star</v-btn>
-  </v-layout>
+          :avatar="rank.avatar"
+          :agency="rank.agency"
+          :color="rank.color"
+        >
+        </HallOfFameItem>
+      </v-col>
+      <v-btn text small color="primary" @click="showMore">Toon meer</v-btn>
+    </v-row>
 </template>
 
 <style lang="scss" scoped>
@@ -33,86 +36,146 @@ export default {
       rankListing: [
         {
           name: 'Mica Wilder',
-          votes: 36
+          agency: 'Recruitment Company',
+          votes: 36,
+          avatar: 'https://api.adorable.io/avatars/200/'+Math.ceil(Math.random() * 10)+'.png',
+          color: '#cc0000'
         },
         {
           name: 'Martyn Mcdougall',
-          votes: 20
+          agency: 'Recruitment Company',
+          votes: 20,
+          avatar: 'https://api.adorable.io/avatars/200/'+Math.ceil(Math.random() * 10)+'.png',
+          color: '#dd6e6e'
         },
         {
           name: 'Duncan Dominguez',
-          votes: 8
+          agency: 'Recruitment Company',
+          votes: 8,
+          avatar: 'https://api.adorable.io/avatars/200/'+Math.ceil(Math.random() * 10)+'.png',
+          color: '#cccccc'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'https://api.adorable.io/avatars/200/'+Math.ceil(Math.random() * 10)+'.png',
+          color: '#176dae'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         },
         {
           name: 'The rest',
-          votes: 7
+          agency: 'Recruitment Company',
+          votes: 7,
+          avatar: 'me.jpg',
+          color: '#032f60'
         }
       ],
-      amountToShow: 8,
+      amountToShow: 4,
       showStepSize: 3
     }
   },

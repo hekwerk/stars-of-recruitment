@@ -1,12 +1,37 @@
 <template>
-  <div class="hall-of-fame-item" :class="rankClass">
-    <div class="star" :title="amountVotes">
-      <div class="image-depth">
-        <img src="~/assets/me.jpg" />
+  <v-card
+    :color="color"
+    dark
+  >
+    <div class="d-flex flex-no-wrap justify-space-between">
+      <div>
+        <v-card-title
+          class="headline"
+          :v-text="name"
+        >{{ name }}</v-card-title>
+        <v-card-subtitle v-text="">{{ agency }}</v-card-subtitle>
+        <v-chip
+           class="ma-3"
+           color="orange"
+           text-color="white"
+         >
+           {{ votes }}
+           <v-icon right>mdi-star</v-icon>
+        </v-chip>
       </div>
+
+      <v-avatar
+        class="ma-3 star"
+        size="125"
+        tile
+      >
+        <v-img :src="avatar"></v-img>
+      </v-avatar>
     </div>
-    <div class="name">{{ name }}</div>
-  </div>
+    <v-card-actions>
+      <v-btn text>Vote</v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <style lang="scss" scoped>
@@ -138,11 +163,23 @@ export default {
       type: Number,
       required: true
     },
-    amountVotes: {
+    votes: {
       type: Number,
       required: true
     },
     name: {
+      type: String,
+      required: true
+    },
+    avatar: {
+      type: String,
+      required: true
+    },
+    agency: {
+      type: String,
+      required: true
+    },
+    color: {
       type: String,
       required: true
     }
