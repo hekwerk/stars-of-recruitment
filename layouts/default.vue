@@ -7,7 +7,7 @@
     >
      <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-     <v-toolbar-title>Stars of Recruitment</v-toolbar-title>
+     <v-toolbar-title>Stars of Recruitment {{ $store.state.testVar }}</v-toolbar-title>
 
      <v-spacer></v-spacer>
 
